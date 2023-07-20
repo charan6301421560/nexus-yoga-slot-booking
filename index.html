@@ -1,180 +1,183 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <!-- <script src="index.js"></script>  -->
-  <link rel="stylesheet" href="index.css">
-  <!-- CSS and JS links for Bootstrap and Bootstrap Datepicker -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-  <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <!-- CSS and JS links for Bootstrap and Bootstrap Datepicker -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 ticket">
-    <div class="text-center">
-      <h1>Yoga at Art Studio</h1>
-      <p>Tue, Jun 20, 2023 5:30 PM - Tue, Jun 20 2023 6:30 PM</p>
-    </div>
-    <div class="d-flex flex-row justify-content-between">
-      <div>
-        <h1>Yoga Tickets</h1>
-        <h1>$25.00</h1>
-        <p>Sal ends on Jun 20, 2023</p>
-      </div>
-      <div class="input-container">
-        <input type="text" id="numberInput" onclick="toggleDropdown()" value="0" readonly>
-        <span class="arrow" onclick="toggleDropdown()">&#9662;</span>
-        <div id="dropdown" class="dropdown-content">
-          <!-- Numbers will be generated dynamically using JavaScript -->
-        </div>
-      </div>
-    </div>
-   <div class="row">
-      <div class="col-md-6">
-            <!-- Datepicker input field with functional calendar icon -->
-    <div class="input-group mb-3 datePicker-cont">
-      <input type="text" class="form-control" placeholder="Select date" id="datepicker" readonly>
-      <div class="input-group-append" onclick="showDatepicker()">
-        <span class="input-group-text">&#128197;</span>
-      </div>
-    </div>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ticket">
+                <div class="text-center">
+                    <h1>Yoga at Art Studio</h1>
+                    <p>Tue, Jun 20, 2023 5:30 PM - Tue, Jun 20 2023 6:30 PM</p>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div>
+                        <h1>Yoga Tickets</h1>
+                        <h1>$25.00</h1>
+                        <p>Sal ends on Jun 20, 2023</p>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="numberInput" onclick="toggleDropdown()" value="0" readonly>
+                        <span class="arrow" onclick="toggleDropdown()">&#9662;</span>
+                        <div id="dropdown" class="dropdown-content">
+                            <!-- Numbers will be generated dynamically using JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Datepicker input field with functional calendar icon -->
+                        <div class="input-group mb-3 datePicker-cont">
+                            <input type="text" class="form-control" placeholder="Select date" id="datepicker" readonly>
+                            <div class="input-group-append" onclick="showDatepicker()">
+                                <span class="input-group-text">&#128197;</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Selected date display and navigation arrows -->
-   <div class="col-md-6" style="display: none;" id="timeChoosing-cont">
-       <div class="col-md-12">
-           <div class="col-md-12">
-        <div class="d-flex flex-row justify-content-center align-items-center" >
-           <span class="selected-date"></span>
-           <div class="navigation-container">
-                <span id="prevArrow" class="navigation-arrow" onclick="goPrevious()">&lt;</span>
-                <span id="nextArrow" class="navigation-arrow" onclick="goNext()">&gt;</span>
-           </div>
-        </div>
-        </div>
-         <div class="row justify-content-center">
-       <div class="col-12">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">9:00 AM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">9:30 AM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-        </div>
-      </div>
-       <div class="col-12">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">10:00 AM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">10:30 AM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-        </div>
-      </div>
-       <div class="col-12">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">11:00 AM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">11:30 AM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-        </div>
-      </div>
-       <div class="col-12">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">2:00 PM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">2:30 PM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-        </div>
-      </div>
-       <div class="col-12">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">3:00 PM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">3:30 PM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-           <div class="col-12">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">4:00 PM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="slot" onclick="selectSlot(this)">
-               <h5 class="time">4:30 PM</h5>
-               <p class="seats">Only 6 Left</p>
-            </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-      </div>
-   </div>
-   
-  </div>
-  <div class="d-flex flex-cloumn justify-content-end button-div">
-      <button id="button-cont" onclick="continueButton()">Continue</button>
-  </div>
-        </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-            <img src="data:image/jpeg;base64,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"/>
-           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
-          <div>
-              <p class="text-center" id="Tickets"></p>
-              <p class="text-center" id="rate"></p>
-              <p class="text-center" id="total"> </p>
-          </div>
-     </div>
+                    <!-- Selected date display and navigation arrows -->
+                    <div class="col-md-6" style="display: none;" id="timeChoosing-cont">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <div class="d-flex flex-row justify-content-center align-items-center">
+                                    <span class="selected-date"></span>
+                                    <div class="navigation-container">
+                                        <span id="prevArrow" class="navigation-arrow" onclick="goPrevious()">&lt;</span>
+                                        <span id="nextArrow" class="navigation-arrow" onclick="goNext()">&gt;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">9:00 AM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">9:30 AM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">10:00 AM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">10:30 AM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">11:00 AM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">11:30 AM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">2:00 PM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">2:30 PM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">3:00 PM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slot" onclick="selectSlot(this)">
+                                                <h5 class="time">3:30 PM</h5>
+                                                <p class="seats">Only 6 Left</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="slot" onclick="selectSlot(this)">
+                                                        <h5 class="time">4:00 PM</h5>
+                                                        <p class="seats">Only 6 Left</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="slot" onclick="selectSlot(this)">
+                                                        <h5 class="time">4:30 PM</h5>
+                                                        <p class="seats">Only 6 Left</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="d-flex flex-cloumn justify-content-end button-div">
+                    <button id="button-cont" onclick="continueButton()">Continue</button>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <img src="data:image/jpeg;base64,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" />
+                <div class=" text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                    <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                </svg>
+               
+                    <p class="text-center" id="Tickets"></p>
+                    <p class="text-center" id="rate"></p>
+                    <p class="text-center" id="total"> </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="index.js"></script> 
-</div>
 </body>
+
 </html>

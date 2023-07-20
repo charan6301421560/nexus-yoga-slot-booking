@@ -102,24 +102,3 @@ function continueButton(){
     console.log(tickets.value)
 }
     
-//     document.addEventListener("DOMContentLoaded", function () {
-  
-//     function generateTimeSlots(containerId, startHour, endHour) {
-//       const container = document.getElementById(containerId);
-
-//       for (let hour = startHour; hour < endHour; hour++) {
-//         for (let minute = 0; minute < 60; minute += 30) {
-//           const timeSlot = document.createElement("button");
-//           timeSlot.textContent = `${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}`;
-//           timeSlot.classList.add("btn", "btn-primary", "mx-2");
-//           container.appendChild(timeSlot);
-//         }
-//       }
-//     }
-
-    
-//     generateTimeSlots("timeSlotsFirstHalf", 9, 13);
-
-    
-//     generateTimeSlots("timeSlotsSecondHalf", 13, 19);
-//   });

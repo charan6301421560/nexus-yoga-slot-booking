@@ -116,7 +116,7 @@ body {
     cursor: pointer; /* Adding a pointer cursor when hovering over the arrow */
     display: flex; /* To align the arrow content (icon) within the circle */
     justify-content: center; /* To horizontally center the arrow icon within the circle */
-    align-items: center; /* To vertically center the arrow icon within the circle */
+    align-items: center; 
   }
   
   .slot {
